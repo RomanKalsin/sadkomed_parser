@@ -7,6 +7,9 @@ authors = ["RomanKalsin <karen52rus@gmail.com>"]
 [tool.poetry.dependencies]
 python = "^3.8"
 
+[tool.poetry.scripts]
+sadkomed_parser = "sadkomed_parser.scripts.sadkomed_parser:main"
+
 [tool.poetry.dev-dependencies]
 pytest = "^5.2"
 
