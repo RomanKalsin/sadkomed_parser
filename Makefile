@@ -1,7 +1,7 @@
 install:
 		poetry install
 sadkomed_parser:
-		poetry run sadkomed_parser 
+		poetry run sadkomed_parser
 build:
 		poetry build
 package-install:
@@ -10,3 +10,7 @@ package-uninstall:
 		python3 -m pip uninstall sadkomed_parser
 publish:
 		poetry publish --dry-run
+lint:
+		poetry run flake8 sadkomed_parser
+
+.PHONY: sadkomed_parser
