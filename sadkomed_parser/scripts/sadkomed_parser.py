@@ -1,13 +1,11 @@
 #!/usr/bin/env python3
 
 
-from sadkomed_parser.cli import cli
-from sadkomed_parser.inventory_list import open_inventory
+from sadkomed_parser.command_handler import command_handler
 
 
 def main():
-    options = cli()
-    open_inventory(options.inventory, options.group)
+    command_handler()
 
 
 if __name__ == '__main__':

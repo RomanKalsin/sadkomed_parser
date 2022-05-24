@@ -4,6 +4,7 @@
 import configparser
 
 
+# Open the inventory file and execute the code on each host
 def open_inventory(path, group):
     data = configparser.ConfigParser()
     data.read(path)
@@ -11,7 +12,4 @@ def open_inventory(path, group):
         groups = data.sections()
     else:
         groups = [group]
-    for sect in groups:
-        print(sect)
-        for key in data[sect]:
-            print("{} = {}".format(key, data[sect][key]))
+    return data, groups
