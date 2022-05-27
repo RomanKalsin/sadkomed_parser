@@ -3,9 +3,14 @@
 
 from sadkomed_parser.cli import cli
 from sadkomed_parser.ssh_key_inst import key_install
+from sadkomed_parser.inventory_list import open_inventory
+from sadkomed_parser.key_exist import key_exist
 
 
 def command_handler():
     options = cli()
-    if options.keys:
-        key_install(options.inventory, options.group)
+    data, groups, cred = open_inventory(options.inventory, options.group)
+    if options.keys and key_exist():
+        key_install(data, groups, cred)
+    else:
+        print(groups)
