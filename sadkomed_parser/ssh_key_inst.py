@@ -6,11 +6,13 @@ import getpass
 from colorama import init, Fore
 
 
+# Color for console
 init(autoreset=True)
 green = Fore.GREEN
 red = Fore.RED
 
 
+# Installing key on a host and possible options
 def inst_on_host(ssh, password):
     ans0 = "password:"
     ans1 = 'were skipped because they already'
@@ -35,6 +37,7 @@ def inst_on_host(ssh, password):
         print(red + "Permission denied")
 
 
+# Preparing data and command for key installation
 def key_install(data, groups, cred):
     for sect in groups:
         print(sect)

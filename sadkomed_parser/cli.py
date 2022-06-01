@@ -4,6 +4,7 @@
 import argparse
 
 
+# Argpaser CLI
 def cli():
     description_cli = "Proxmox parser, takes an inventory file."
     options = argparse.ArgumentParser(description=description_cli)

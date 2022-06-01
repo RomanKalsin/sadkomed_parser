@@ -5,7 +5,7 @@ import configparser
 import re
 
 
-# Open the inventory file and return data
+# Opening an inventory file and preparing data for check in 
 def open_inventory(path, group):
     data = configparser.ConfigParser()
     data.read(path)

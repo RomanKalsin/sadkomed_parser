@@ -7,6 +7,7 @@ from sadkomed_parser.inventory_list import open_inventory
 from sadkomed_parser.key_exist import key_exist
 
 
+# Condition for executing commands
 def command_handler():
     options = cli()
     data, groups, cred = open_inventory(options.inventory, options.group)
